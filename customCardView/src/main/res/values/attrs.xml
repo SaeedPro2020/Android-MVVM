@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CardViewPlus">
+        <attr name="normalCardElevation" format="dimension" />
+        <attr name="pressedCardElevation" format="dimension" />
+        <attr name="cardPressedColor" format="color" />
+        <attr name="animationEnabled" format="boolean" />
+        <attr name="clickDelay" format="integer" />
+    </declare-styleable>
+</resources>

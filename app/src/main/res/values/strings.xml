@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MasterMusic</string>
+    <string name="hello_blank_fragment">This is detalis fragment</string>
+    <string name="animation_covered_image">covered image for animation</string>
+    <string name="image_covered_for_animation">image covered for animation</string>
+    <string name="seried_of_animation_pattern">seried of animation pattern</string>
+    <string name="image_item_shop_list">item added to shop list</string>
+    <string name="master_music">Master music</string>
+    <string name="track_name">Track name</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="todo">Image for details fragment</string>
+    <string name="search_field">Search artist name</string>
+    <string name="search_item">Search Item</string>
+    <string name="an_icon_image_for_artist_name">An icon image for artist name</string>
+    <string name="an_icon_image_for_trackname">Ain image icon for track name</string>
+</resources>

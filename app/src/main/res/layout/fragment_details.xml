@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mastermusic.viewModel.MyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_gray_details"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/musicImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/todo"
+            app:imageUrl="@{viewModel.selectedMusic.artWorkImage}"
+            app:layout_constraintBottom_toTopOf="@+id/details_track_name"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:contentDescription="music name"
+            tools:src="@drawable/carnation01" />
+
+        <TextView
+            android:id="@+id/details_track_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baskv"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@+id/album_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/musicImage"
+            app:text="@{`Track name:  ` + viewModel.selectedMusic.trackName}"
+            tools:text="Track name for details view" />
+
+        <TextView
+            android:id="@+id/album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/details_artist_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_track_name"
+            android:fontFamily="@font/script_mt_bold"
+            app:text="@{`Album name:  ` + viewModel.selectedMusic.albumName}"
+            tools:text="Album name for details view" />
+
+        <TextView
+            android:id="@+id/details_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/release_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/album_name"
+            android:fontFamily="@font/script_mt_bold"
+            app:text="@{`Artist name:  ` + viewModel.selectedMusic.artistName}"
+            tools:text="Artist name for details view" />
+
+        <TextView
+            android:id="@+id/release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_artist_name"
+            android:fontFamily="cursive"
+            app:text="@{`Release date:  ` + viewModel.selectedMusic.releaseDate}"
+            tools:text="Release date for details view" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/script_mt_bold"
+            app:layout_constraintTop_toBottomOf="@+id/release_date"
+            app:price="@{viewModel.selectedMusic.price}"
+            tools:text="$0.19 / each" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
