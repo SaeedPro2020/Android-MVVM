@@ -1,5 +1,5 @@
 ## MVVM
-### This is a demo app which it designed based on MVVM pattern in a mobile architecture. 
+### This is a demo app which it designed based on MVVM pattern. 
    There is a lot of things that we can do to improve the App including
    
    #### 1- Add more dimensions value for different screen sizes.
